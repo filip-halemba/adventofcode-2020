@@ -2,7 +2,7 @@ package com.adventofcode;
 
 import java.util.*;
 
-class Day12 {
+class Day_1_2 {
 
     private final static int EXPECTED_SUM = 2020;
 
@@ -10,7 +10,7 @@ class Day12 {
     private final List<Integer> list;
 
 
-    Day12(List<Integer> input) {
+    Day_1_2(List<Integer> input) {
         this.list = input;
         this.set = new HashSet<>(list.size());
     }

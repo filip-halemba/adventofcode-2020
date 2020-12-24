@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-class Day11 {
+class Day_1_1 {
 
     private final static int EXPECTED_SUM = 2020;
 
@@ -12,7 +12,7 @@ class Day11 {
     private final List<Integer> list;
 
 
-    Day11(List<Integer> input) {
+    Day_1_1(List<Integer> input) {
         this.list = input;
         this.set = new HashSet<>(list.size());
     }

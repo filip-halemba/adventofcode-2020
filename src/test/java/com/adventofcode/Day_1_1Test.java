@@ -2,21 +2,31 @@ package com.adventofcode;
 
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class Day12Test {
+class Day_1_1Test {
+
+	@ParameterizedTest
+	@MethodSource("source")
+	void boolean_equal_to_boolean(boolean left, boolean right) {
+		assertThat(left).isEqualTo(right);
+	}
 
 	@Test
 	void example() {
 		List<Integer> input = Lists.newArrayList(1721, 979, 366, 299, 675, 1456);
 
-		Day12 solution = new Day12(input);
+		Day_1_1 solution = new Day_1_1(input);
 
-		assertThat(solution.solve()).isEqualTo(241861950L);
+		assertThat(solution.solve()).isEqualTo(514579L);
 	}
 
 	@Test
@@ -224,9 +234,16 @@ class Day12Test {
 				1875
 		);
 
-		Day12 solution = new Day12(input);
+		Day_1_1 solution = new Day_1_1(input);
 
-		assertThat(solution.solve()).isEqualTo(158661360L);
+		assertThat(solution.solve()).isEqualTo(964875L);
+	}
+
+	private static Stream<Arguments> source() {
+		return Stream.of(
+				Arguments.of(true, true),
+				Arguments.of(false, false)
+		);
 	}
 
 }
